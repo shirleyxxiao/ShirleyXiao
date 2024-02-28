@@ -253,13 +253,15 @@
                 <h1>Welcome!</h1>
                 <br>
                 <br>
-                <p>Hope you are doing well! this is my website, stay and explore!</p>
+                <p> My <span class="auto-type"></span></p>
+                <!--<p>Hope you are doing well! this is my website, stay and explore!</p>-->
                 <a href="" class="hero-btn">Click to Learn More!</a>
+                <!--add an autotype here, it would be cool-->
             </div>
         </section>
 
 
-
+        <!--for when on mobile, for mobile accessibility-->
         <script> <!--javascript for menu, for the toggle feature-->
             var navLinks = document.getElementsByClassName("navLinks");
             function showMenu(){
@@ -268,6 +270,17 @@
             function hideMenu(){
                 navLinks.style.right = "-200px";
             }
+        </script>
+
+        <!--adding a autotype feature for dynamic typing-->
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+        <script>
+            var typed = new Typed(".auto-type", {
+                strings:["name is Shirley Xiao! <br><br>I hope you are doing well! This is my personal website, stay and explore!"],
+                typeSpeed: 90,
+                backSpeed: 100000000000,
+                loop: true
+            });
         </script>
     </body>
 </html>
