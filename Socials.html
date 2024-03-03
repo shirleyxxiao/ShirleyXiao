@@ -135,7 +135,6 @@
             .wrapper {
                 display: inline-flex;
                 list-style: none;
-                place-content: center;
             }
 
   .wrapper .icon {
@@ -154,7 +153,6 @@
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    place-content: center;
   }
 
   .wrapper .tooltip {
@@ -260,12 +258,14 @@
         </div>
 	<!--create a, wanna send me a message? and box to submit, make sure to take their emails/name-->
 
-    <ul class="wrapper">
-        <li class="icon instagram">
-            <span class="tooltip">Instagram</span>
-            <span><i class="fab fa-instagram"></i></span>
-        </li> <!--figure out how to center!-->
-    </ul>
+    <center>
+        <ul class="wrapper">
+            <li class="icon instagram">
+                <span class="tooltip">Instagram</span>
+                <span><i class="fab fa-instagram"></i></span>
+            </li> <!--figure out how to center!-->
+        </ul>
+    </center>
 
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
