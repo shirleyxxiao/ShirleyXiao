@@ -120,6 +120,17 @@
                 justify-content: center;
 			}
 
+            .container-1 {
+				display: flex;
+				flex-wrap: wrap;
+				place-content: center;
+                color: pink;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+			}
+
+
             .container h1{
                 font-size: 30px;
                 font-weight: 1000;
@@ -247,22 +258,23 @@
             <h1> Hey! I'm glad you're here, let's get in touch! <br><br><center>Connect with me <span class="auto-type" style="color: rgb(207, 196, 255)"/span></center></h1>
         </div>
 	<!--create a, wanna send me a message? and box to submit, make sure to take their emails/name-->
-    <center>
-        <form action="mailto:shirleyxiaocoop@gmail.com"
-        method="POST"
-        enctype="multipart/form-data"
-        name="EmailForm">
-            Name:<br>
-            <input type="text" size="19" name="Contact-Name"><br><br>
-            Email:<br>
-            <input type="email" name="Contact-Email"><br><br> 
-            Message:<br> 
-            <textarea name="Contact-Message" rows="6″ cols="20″>
-            </textarea><br><br> 
-            <button type="submit" value="Submit">Send</button>
-        </form> 
-    </center>
-
+    <div class="container-1">
+        <center>
+            <form action="mailto:shirleyxiaocoop@gmail.com"
+            method="POST"
+            enctype="multipart/form-data"
+            name="EmailForm">
+                Name:<br>
+                <input type="text" size="19" name="Contact-Name"><br><br>
+                Email:<br>
+                <input type="email" name="Contact-Email"><br><br> 
+                Message:<br> 
+                <textarea name="Contact-Message" rows="6″ cols="20″>
+                </textarea><br><br> 
+                <button type="submit" value="Submit">Send</button>
+            </form> 
+        </center>    
+    </div>
     <center style="padding-top: 10%;">
         <ul class="wrapper">
             <li class="icon instagram">
