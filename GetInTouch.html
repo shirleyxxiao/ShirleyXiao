@@ -275,6 +275,18 @@
         box-shadow: #3c4fe0 0 3px 7px inset;
         transform: translateY(2px);
         }
+
+        /*textbox*/
+        input[type=text], select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
                         
 	</style>
 
@@ -312,6 +324,9 @@
             method="POST"
             enctype="multipart/form-data"
             name="EmailForm">
+
+            <!--
+
                 Name:<br>
                 <input type="text" size="19" name="Contact-Name"><br><br>
                 Email:<br>
@@ -319,6 +334,14 @@
                 Message:<br> 
                 <textarea name="Contact-Message" rows="6″ cols="20″>
                 </textarea><br><br> 
+            -->
+
+            <label for="fname" style="font-size: 12px;">Full Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name...">
+            <!--email too?-->
+            <label for="fname" style="font-size: 12px;">Full Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name...">
+                
                 <button class="button-29"  type="submit" value="Submit">Send</button>
                 <button class="button-29" role="button">Send</button>
             </form> 
