@@ -225,8 +225,35 @@
             }
             }
 
+            /*button css*/
+        .bubble-btn {
+            background-color: pink;
+            color: white;
+            border: none;
+            padding: 20px 40px;
+            font-size: 16px;
+            position: relative;
+            transition: transform 0.3s;
+        }
 
-                        
+        .bubble-btn:hover {
+            animation: bubble 1s ease-out;
+            background-color: darkmagenta;
+        }
+
+        @keyframes bubble {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.2);
+        }
+        100% {
+            transform: scale(1);
+        }
+        }
+
+                                
 	</style>
 
 </head>
@@ -305,7 +332,7 @@
                 <p style="font-size: 12px; font-weight: 200;">LOT'S OF COFFEE!</p>
             </div>
             <footer><br><br>Interested In?...<br><br> <!--tags for other pages about me-->
-            
+                <button class="bubble-btn">TEST</button>
             </footer>
           </div>
           
