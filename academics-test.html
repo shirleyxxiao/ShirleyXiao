@@ -227,18 +227,21 @@
 
             /*button css*/
         .bubble-btn {
-            background-color: pink;
+            background: linear-gradient(-45deg, #270a5e, #3e031a, rgb(83, 47, 227), rgb(58, 0, 128));;
             color: white;
             border: none;
             padding: 20px 40px;
             font-size: 16px;
             position: relative;
             transition: transform 0.3s;
+            padding-left: 5%;
+            padding-right: 5%;
         }
 
         .bubble-btn:hover {
             animation: bubble 1s ease-out;
-            background-color: darkmagenta;
+            background-color: white;
+            color: black;
         }
 
         @keyframes bubble {
@@ -246,7 +249,8 @@
             transform: scale(1);
         }
         50% {
-            transform: scale(1.2);
+            transform: rotate(10deg);
+            /*scale(1.2);*/
         }
         100% {
             transform: scale(1);
@@ -333,6 +337,7 @@
             </div>
             <footer><br><br>Interested In?...<br><br> <!--tags for other pages about me-->
                 <button class="bubble-btn">TEST</button>
+                <button class="bubble-btn">TEST1</button>
             </footer>
           </div>
           
