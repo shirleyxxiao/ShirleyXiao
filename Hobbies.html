@@ -47,7 +47,7 @@
         
         <img id="bg-2" src="Resources/littlemountain.png" alt="mountain-1">
         <h1 id="title">My Hobbies!</h1>
-        <img id="bg-3" src="Resources/birds.png" alt="mountain"> <!--change?-->
+        <img id="bg-3" src="Resources/birds.png" alt="bird"> <!--change?-->
 
         
     </div>
@@ -75,6 +75,29 @@
         </div>
     </section>
 
+    <section class="about">
+        <div class="image-gallary">
+            <div class="image-card" id="image-card-5">
+                <img src="Resources/river.jpg" alt="river">
+            </div>
+            <div class="image-card" id="image-card-6">
+                <img src="Resources/ram.JPG" alt="ram">
+            </div>
+            <div class="image-card" id="image-card-7">
+                <img src="Resources/sunset.JPG" alt="sunset">
+            </div>
+            <div class="image-card" id="image-card-8">
+                <img src="Resources/river.jpg" alt="river">
+            </div>
+        </div>
+        <div class="details">
+            AHHHHHHHHHH AHHHHHHHHHH AHHHHHHHHHH AHHHHHHHHHH AHHHHHHHHHH AHHHHHHHHHH AHHHHHHHHHH AHHHHHHHHHH AHHHHHHHHHH AHHHHHHHHHH AHHHHHHHHHH AHHHHHHHHHH AHHHHHHHHHH AHHHHHHHHHH 
+            AHHHHHHHHHH AHHHHHHHHHH AHHHHHHHHHH AHHHHHHHHHH AHHHHHHHHHH AHHHHHHHHHH AHHHHHHHHHH AHHHHHHHHHH AHHHHHHHHHH AHHHHHHHHHH AHHHHHHHHHH AHHHHHHHHHH AHHHHHHHHHH AHHHHHHHHHH 
+        </div>
+        <div class="footer-btn">
+            <button class="trip-pic">Pictures!</button>
+        </div>
+    </section>
     <!--adding new script:-->
     <script>
         var title = document.getElementById("title");
@@ -86,12 +109,17 @@
         var image_card_3 = document.getElementById("image-card-3");
         var image_card_4 = document.getElementById("image-card-4");
 
+        var image_card_5 = document.getElementById("image-card-5");
+        var image_card_6 = document.getElementById("image-card-6");
+        var image_card_7 = document.getElementById("image-card-7");
+        var image_card_8 = document.getElementById("image-card-8");
+
         document.addEventListener("scroll", (event) => {
             var positionY = window.scrollY;
             
             title.style.fontSize = `${100 + positionY * 0.5}px`;
 
-            bg_2.style.top = `-${positionY * 0.5}px`;
+            bg_2.style.top = `-${positionY * 0.75}px`;
             bg_3.style.top = `-${positionY}px`;
             bg_3.style.top = 1 + positionY * 0.001;
 
@@ -101,11 +129,25 @@
             
             image_card_2.style.transform = `translateY(${positionY * 0.1 + -50}px)`;
 
-            image_card_3.style = `translateY(${
-                positionY * 0.1 + 100}px)`;
+            image_card_3.style.transform = `translateY(${
+                positionY * -0.1 + 100}px)`;
 
             image_card_4.style.transform = `translateY(${
-                positionY * 0.2 + -125
+                positionY * 0.16 + -125
+            }px)`;
+
+                /*newly added - need to fix some*/
+            image_card_5.style.transform = `translateY(${
+                positionY * -0.5 + 800
+            }px)`
+            
+            image_card_6.style.transform = `translateY(${positionY * -0.01 + -50}px)`;
+
+            image_card_7.style.transform = `translateY(${
+                positionY * -0.125 + 150}px)`;
+
+            image_card_8.style.transform = `translateY(${
+                positionY * -0.00001 + -60
             }px)`;
 
             var _newOpacity = positionY * 0.001;
@@ -114,6 +156,10 @@
                 image_card_2.style.opacity = _newOpacity;
                 image_card_3.style.opacity = _newOpacity;
                 image_card_4.style.opacity = _newOpacity;
+                image_card_5.style.opacity = _newOpacity;
+                image_card_6.style.opacity = _newOpacity;
+                image_card_7.style.opacity = _newOpacity;
+                image_card_8.style.opacity = _newOpacity;
             }
 
         });
