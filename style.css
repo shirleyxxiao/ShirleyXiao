@@ -6,6 +6,7 @@
         }
         body{
             font-family: 'Poppins', sans-serif;
+            color: #fff;
         }
         html{
             padding: 0;
@@ -18,11 +19,69 @@
                 overflow-x: hidden;
             */
         }
+        .parallax-container{
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+            background-color: black;
+        }
+        .parallax-container::after{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            height: 5rem;
+            width: 100%;
+        }
         img {
             width: 100%;
             display: block;
         }
+        .parallax-container img{
+            position: absolute;
+        }
+        .parallax-container h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 100px;
+            font-weight: 900;
+        }
+        .about{
+            min-width: none;
+            background-color: black;
+            display: grid;
+            place-content: center;
+        }
+        .image-gallary{
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3rem;
+        }
 
+        .image-card {
+            opacity: 0;
+        }
+
+        .image-card img{
+            border-radius: 1rem;
+        }
+
+        .details {
+            max-width: 800px;
+            margin: auto;
+            margin-top: 8rem;
+            font-size: 1.2rem;
+            line-height: 2rem;
+            text-align: center;
+        }
+        .footer-btn{
+            max-width: 800px;
+            margin: 2rem auto;
+            text-align: center;
+        }
             header{
                 min-height: 100vh;
                 width: 100%;
