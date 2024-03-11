@@ -50,6 +50,8 @@
             font-size: 90px;
             font-weight: 900;
         }
+
+
         .about{
             min-width: 125vh;
             background-color: black;
@@ -178,6 +180,24 @@
                 font-size: 90px;
                 font-weight: 900;
             }
+
+            .about{
+                max-width: 50vh; /*????? not sure waht this is for*/
+                background-color: black;
+                display: grid;
+                place-content: center;
+                padding-bottom: 10%;
+                padding-top: 10%;
+            }
+
+            .image-gallary{
+                max-width: 1200px;
+                margin: auto;
+                display: grid;
+                grid-template-columns: repeat(2, 0.3fr); /*adjusted here too*/
+                gap: 3rem;
+            }
+    
           }
 
             /* old code
