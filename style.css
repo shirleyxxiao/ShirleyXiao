@@ -169,6 +169,16 @@
         }
         
         /*mobile view*/
+        @media screen and (max-width: 850px) {
+            .parallax-container h1 {
+                position: absolute;
+                top: 25%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 90px;
+                font-weight: 900;
+            }
+          }
 
             /* old code
                 header{
