@@ -197,7 +197,16 @@
                 grid-template-columns: repeat(2, 0.3fr); /*adjusted here too*/
                 gap: 3rem;
             }
-    
+
+            .details{
+                max-width: 200px; /*COME BACK TO THIS!!!*/
+                margin: auto;
+                margin-top: 8rem;
+                font-size: 1.2rem;
+                line-height: 2rem;
+                text-align: center;
+                place-content: center;
+            }
           }
 
             /* old code
