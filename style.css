@@ -228,6 +228,18 @@
             }
           }
 
+          /*for mobile phone specific*/
+          @media screen and (max-width: 430px) {
+            .parallax-container h1 {
+                position: absolute;
+                top: 15%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 40px;
+                font-weight: 900;
+            }
+          } /*okay... after some thought, maybe make a completely alternate view for mobile...*/
+
             /* old code
                 header{
                 min-height: 100vh;
