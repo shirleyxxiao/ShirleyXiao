@@ -87,10 +87,10 @@
     <section class="about">
         <div class="image-gallary">
             <div class="image-card" id="image-card-5">
-                <img src="Resources/river.jpg" alt="river">
+                <img src="Resources/Math1.jpg" alt="Linear Algebra">
             </div>
             <div class="image-card" id="image-card-6">
-                <img src="Resources/ram.JPG" alt="ram">
+                <img src="Resources/Math2.jpg" alt="Differential Equations">
             </div>
             <div class="image-card" id="image-card-7">
                 <img src="Resources/sunset.JPG" alt="sunset">
@@ -110,8 +110,6 @@
     <!--adding new script:-->
     <script>
         var title = document.getElementById("title");
-        var bg_2 = document.getElementById("bg-2");
-        var bg_3 = document.getElementById("bg-3");
 
         var image_card_1 = document.getElementById("image-card-1");
         var image_card_2 = document.getElementById("image-card-2");
@@ -128,9 +126,7 @@
             
             title.style.fontSize = `${100 + positionY * 0.5}px`;
 
-            bg_2.style.top = `-${positionY * 0.7}px`;
-            bg_3.style.top = `-${positionY}px`;
-            bg_3.style.top = 1 + positionY * 0.001;
+
 
             image_card_1.style.transform = `translateY(${
                 positionY * -0.5 + 400
