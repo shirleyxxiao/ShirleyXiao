@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        img {
+            width: 100%;
+            display: block;
+        }
+        body{
+            font-family: 'Poppins', sans-serif;
+            color: #fff;
+            background: black;
+        }
+        html{
+            font-family: 'Poppins', sans-serif;
+
+            /*
+                font-size: 62.5%;
+                scroll-behavior: smooth;
+                scroll-padding-top: 6rem;
+                overflow-x: hidden;
+            */
+        }
+        .parallax-container{
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+            background-color: black;
+        }
+        .parallax-container::after{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            height: 5rem;
+            width: 100%;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+        }
+        
+        .parallax-container img{
+            position: relative;
+        }
+        .parallax-container h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-40%, -50%); 
+            font-size: 70px;
+            font-weight: 900;
+        }
+
+
+        .about{
+            min-width: 125vh;
+            background-color: black;
+            display: grid;
+            place-content: center;
+            padding-bottom: 10%;
+            padding-top: 10%;
+        }
+        .image-gallary{
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3rem;
+        }
+
+        .image-card {
+            opacity: 0;
+        }
+
+        .image-card img{
+            border-radius: 1rem;
+        }
+
+        .details {
+            max-width: 800px;
+            margin: auto;
+            margin-top: 8rem;
+            font-size: 1.2rem;
+            line-height: 2rem;
+            text-align: center;
+        }
+        .footer-btn{
+            max-width: 800px;
+            margin: 2rem auto;
+            text-align: center;
+        }
+        .trip-pic{
+            font-size: 1rem;
+            font-weight: 600;
+            outline: none;
+            border: none;
+            padding: .75rem 1rem;
+            border-radius: 5px;
+
+        }
+        /*nav bar stuff*/
+        nav{
+            display: flex;
+            padding: 2% 6%;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        nav img{
+            width: 150px;
+        }
+
+        .nav-links{
+            flex: 1;
+            text-align: right;
+        }
+        .nav-links ul li{
+            list-style: none;
+            display: inline-block;
+            padding: 8px 12px;
+            position: relative;
+        }
+        .nav-links ul li a{
+            color: #fff;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        .nav-links ul li::after{
+            content: '';
+            width: 0%;
+            height: 2px;
+            background-color: pink;
+            display: block;
+            margin: auto;
+            transition: 0.5s;
+        }
+
+        .nav-links ul li:hover::after{
+            width: 100%; 
+        }
+
+        .hover-rotate {
+            overflow: hidden;
+            margin: 8px;
+            min-width: 200px;
+            max-width: 300px;
+            width: 100%;
+        }  
+
+        .hover-rotate img {
+            transition: all 1s;
+            box-sizing: border-box;
+            max-width: 100%;
+        }
+
+        .hover-rotate:hover img {
+            transform: scale(1) rotate(360deg);
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        
+        /*mobile view*/
+        @media screen and (max-width: 1000px) {
+            .parallax-container h1 {
+                position: absolute;
+                top: 25%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 90px;
+                font-weight: 900;
+            }
+
+            .parallax-container{
+                height: 50vh;
+                position: relative;
+                overflow: hidden;
+                background-color: black;
+            }
+          }
+
+          @media screen and (max-width: 750px) {
+            .parallax-container h1 {
+                position: absolute;
+                top: 15%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 70px;
+                font-weight: 900;
+            }
+
+            .about{
+                max-width: 50vh; /*????? not sure waht this is for*/
+                background-color: black;
+                display: grid;
+                place-content: center;
+                padding-bottom: 10%;
+                padding-top: 10%;
+            }
+
+            .image-gallary{
+                max-width: 1200px;
+                margin: auto;
+                display: grid;
+                grid-template-columns: repeat(2, 0.3fr); /*adjusted here too*/
+                gap: 3rem;
+            }
+
+            .details{
+                max-width: 50vh; /*COME BACK TO THIS!!!*/
+                margin-top: 8rem;
+                margin-left: 15%;
+                font-size: 1.2rem;
+                line-height: 2rem;
+                text-align: center;
+                place-content: center;
+            }
+            .footer-btn{
+                max-width: 800px;
+                margin: 2rem auto;
+                text-align: center;
+                margin-left: 30%;
+            }
+          }
+
+          /*for mobile phone specific*/
+          @media screen and (max-width: 430px) {
+            .parallax-container h1 {
+                position: absolute;
+                top: 20%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 10px;
+                font-weight: 100;
+            }
+          } /*okay... after some thought, maybe make a completely alternate view for mobile...*/
