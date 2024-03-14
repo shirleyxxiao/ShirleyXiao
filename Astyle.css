@@ -171,7 +171,7 @@
         }
         
         /*mobile view*/
-        @media screen and (max-width: 1000px) {
+        @media screen and (max-width: 900px) {
             .parallax-container h1 {
                 position: absolute;
                 top: 25%;
@@ -189,7 +189,7 @@
             }
           }
 
-          @media screen and (max-width: 750px) {
+          @media screen and (max-width: 700px) {
             .parallax-container h1 {
                 position: absolute;
                 top: 15%;
