@@ -107,6 +107,30 @@
             <button class="trip-pic">Courses I have taken!</button>
         </div>
     </section>
+
+    <section class="about">
+        <div class="image-gallary">
+            <div class="image-card" id="image-card-9">
+                <img src="Resources/Math1.jpg" alt="Linear Algebra">
+            </div>
+            <div class="image-card" id="image-card-10">
+                <img src="Resources/Math2.jpg" alt="Differential Equations">
+            </div>
+            <div class="image-card" id="image-card-11">
+                <img src="Resources/sunset.JPG" alt="sunset">
+            </div>
+            <div class="image-card" id="image-card-12">
+                <img src="Resources/river.jpg" alt="river">
+            </div>
+        </div>
+        <div class="details">
+            Studying across a wide variety of mathematics disciplines, I have taken courses in math, applied math, statistics, computer science, and more! 
+            If you would like to view a list of courses I have taken, click the link below to get a full list + some more information!
+        </div>
+        <div class="footer-btn">
+            <button class="trip-pic">Courses I have taken!</button>
+        </div>
+    </section>
     <!--adding new script:-->
     <script>
         var title = document.getElementById("title");
@@ -120,6 +144,11 @@
         var image_card_6 = document.getElementById("image-card-6");
         var image_card_7 = document.getElementById("image-card-7");
         var image_card_8 = document.getElementById("image-card-8");
+
+        var image_card_9 = document.getElementById("image-card-9");
+        var image_card_10 = document.getElementById("image-card-10");
+        var image_card_11 = document.getElementById("image-card-11");
+        var image_card_12 = document.getElementById("image-card-12");
 
         document.addEventListener("scroll", (event) => {
             var positionY = window.scrollY;
@@ -143,6 +172,20 @@
 
                 /*newly added - need to fix some*/
             image_card_5.style.transform = `translateY(${
+                positionY * -0.5 + 800
+            }px)`
+            
+            image_card_6.style.transform = `translateY(${positionY * -0.01 + -50}px)`;
+
+            image_card_7.style.transform = `translateY(${
+                positionY * -0.125 + 150}px)`;
+
+            image_card_8.style.transform = `translateY(${
+                positionY * -0.00001 + -60
+            }px)`;
+
+                 /*third section cards*/
+                 image_card_9.style.transform = `translateY(${
                 positionY * -0.5 + 800
             }px)`
             
