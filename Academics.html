@@ -108,7 +108,7 @@
         </div>
     </section>
 
-    <section class="about">
+    <section class="about" style="padding-top: 10%;">
         <div class="image-gallary">
             <div class="image-card" id="image-card-9">
                 <img src="Resources/Math1.jpg" alt="Linear Algebra">
@@ -186,16 +186,16 @@
 
                  /*third section cards*/
                  image_card_9.style.transform = `translateY(${
-                positionY * -0.5 + 800
+                positionY * -0.4 + 1000
             }px)`
             
-            image_card_10.style.transform = `translateY(${positionY * -0.01 + -50}px)`;
+            image_card_10.style.transform = `translateY(${positionY * -0.01 + 25}px)`;
 
             image_card_11.style.transform = `translateY(${
-                positionY * -0.125 + 150}px)`;
+                positionY * -0.125 + 350}px)`;
 
             image_card_12.style.transform = `translateY(${
-                positionY * -0.00001 + -60
+                positionY * -0.001 + -20
             }px)`;
 
             var _newOpacity = positionY * 0.001;
@@ -208,6 +208,10 @@
                 image_card_6.style.opacity = _newOpacity;
                 image_card_7.style.opacity = _newOpacity;
                 image_card_8.style.opacity = _newOpacity;
+                image_card_9.style.opacity = _newOpacity;
+                image_card_10.style.opacity = _newOpacity;
+                image_card_11.style.opacity = _newOpacity;
+                image_card_12.style.opacity = _newOpacity;
             }
 
         });
