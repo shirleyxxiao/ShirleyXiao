@@ -13,4 +13,6 @@ $headers array(
 )
 
 //will get data from the message box in GetInTouch.html page
-$message = file_get_contents("mail-template.php")
+$message = file_get_contents("mail-template.php");
+
+$send = mail($to, $subject, $message, $headers);
