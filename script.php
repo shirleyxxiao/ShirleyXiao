@@ -16,3 +16,7 @@ $headers array(
 $message = file_get_contents("mail-template.php");
 
 $send = mail($to, $subject, $message, $headers);
+
+//checking if email sent
+
+echo ($send ? "Mail has successfully sent" : "Error!")
