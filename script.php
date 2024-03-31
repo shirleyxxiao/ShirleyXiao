@@ -7,12 +7,12 @@
    $headers = array(
     	'MIME-Version' => '1.0',
     	'Content-type' => 'text/html;charset=UTF-8',
-    	'From' => 'dennis@mail.com',
-    	'Reply-To' => 'dennis@mail.com'
+    	'From' => 'shirleyxiaocoop@gmail.com',
+    	'Reply-To' => 'shirleyxiaocoop@gmail.com'
    );
  
    // Setting the value in the $name variable.
-   $name = "Dennis";
+   $name = "TESTTTTT";
  
    // Starting output buffer.
    ob_start();
