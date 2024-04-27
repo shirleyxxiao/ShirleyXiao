@@ -1,13 +1,16 @@
 <?php
 $to = "shirleyxiaocoop@gmail.com";
-$subject = "Thank you for your purchase";
+$subject = "Thank you";
 
-// Headers
+// Retrieve the user-provided email address from the form
+$user_email = $_POST['email'];
+
+//Headers
 $headers = array(
     'MIME-Version' => '1.0',
     'Content-type' => 'text/html;charset=UTF-8',
-    'From' => 'shirleyxiaocoop@gmail.com',
-    'Reply-To' => 'shirleyxiaocoop@gmail.com'
+    'From' => $user_email,
+    'Reply-To' => $user_email
 );
 
 // Name variable (you can set it dynamically based on user input)

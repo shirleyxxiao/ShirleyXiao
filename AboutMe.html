@@ -174,29 +174,42 @@
 			
 			}
 
-			.container {
-				display: flex;
-				flex-wrap: wrap;
-				place-content: center;
-			}
 			/*for the links, no link underline to show up, just act as regular text*/
 
 			a:link {
 				text-decoration: none;
 			}
-			/*Mobile View*/
-			@media screen and (max-width: 500px) {
-            .container {
-                display: flex;
-				flex-wrap: wrap;
-				place-content: center;
-            }
-			.container1 {
-				/*tmp*/
+
+			.column {
+				float: left;
+				width: 25%;
+				padding: 0px;
+				height: 300px; 
+			}
+			.row:after {
+				content: "";
+				display: table;
+				clear: both;
 			}
 
-           
+			/*Mobile View*/
+			@media screen and (max-width: 800px) {
+            .column {
+				float: center;
+				width: 40%;
+				height: 300px; 
+				padding-bottom: 20%;
+            }
+			.column1 {
+				padding-left: 38%;
+			}
           }
+		  @media screen and (max-width: 200px) {
+            .column {
+				width: 100%;
+            }
+		  }
+
 	</style>
 
 </head>
@@ -224,48 +237,55 @@
 			<center><h1 style="font-size: 30px;"><b><font color="pink">Hover on the cards to reveal more info :)</font><b></h1></center>
 				<br><br><br><br><br><br><br>
 		</div>
-
-	<div class="container">
-			<div class="card">
-				<a class="card-info" href="Academics.html"> <!--old link: Academics.html-->
-				  <p class="info">Double major in Statistics and Computational Math at the University of Waterloo!<br><br>Click me to learn more!</p>
-				</a>
-				<br><br><br><br>
-				<font color="pink" ><h1><b>Want to see what I'm studying?!</b></h1></font>
-				<br><br><br><br>
-			  </div>
-			  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			  <div class="card">
-				<a class="card-info" href="Hobbies.html">
-					<p class="info">My Hobbies!<br><br>Click me to learn more!</p>
-				</a>
-				<br><br><br><br>
-				<font color="pink"><h1><b>What I like to do in my free time!</b></h1></font>
-			  </div>
-			  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			 
-			  <!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
-			  <!--hide for now-->
-			  <!--
-			  <div class="card">
-				<a class="card-info" href="Mystery.html">
-					<p class="info">Click me to get a surprise!</p>
-				</a> 
-				<br><br><br><br>
-				<font color="pink"><h1><b>Mystery box!</b></h1></font>
-			  </div>
-			  <hr>
-			  -->
-			  <!-- make a carousel of pictures ? maybe and text -->
-			  <div class="container1"> <!--maybe need to create a separate container like container-1?--> <!--LOOK HERE-->
+	</section>
+	<div class="row">
+			<div class="column" style="padding-left: 15%;">
 				<div class="card">
-					<a class="card-info" href="GetInTouch.html">
-						<p class="info">Want to send a message?<br><br> Interested in a coffee chat? <br><br>Curious about anything?<br><br> Click me!</p>
+					<a class="card-info" href="Academics.html"> <!--old link: Academics.html-->
+					  <p class="info">Double major in Statistics and Computational Math at the University of Waterloo!<br><br>Click me to learn more!</p>
 					</a>
 					<br><br><br><br>
-					<font color="pink"><h1><b>Get in touch!</b></h1></font>
+					<font color="pink" ><h1><b>Want to see what I'm studying?!</b></h1></font>
+					<br><br><br><br>
+				  <!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+				 
+				  <!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+				  <!--hide for now-->
+				  <!--
+				  <div class="card">
+					<a class="card-info" href="Mystery.html">
+						<p class="info">Click me to get a surprise!</p>
+					</a> 
+					<br><br><br><br>
+					<font color="pink"><h1><b>Mystery box!</b></h1></font>
 				  </div>
-			</div>  
+				  <hr>
+				  -->
+				  <!-- make a carousel of pictures ? maybe and text -->
+				</div>	
+			</div>
+			
+			<div class="column">
+				<div class="card">
+					<a class="card-info" href="Hobbies.html">
+						<p class="info">My Hobbies!<br><br>Click me to learn more!</p>
+					</a>
+					<br><br><br><br>
+					<font color="pink"><h1><b>What I like to do in my free time!</b></h1></font>
+				</div>
+				  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			</div>
+			<div class="column">
+				<div class="column1">
+					<div class="card">
+						<a class="card-info" href="GetInTouch.html">
+							<p class="info">Want to send a message?<br><br> Interested in a coffee chat? <br><br>Curious about anything?<br><br> Click me!</p>
+						</a>
+						<br><br><br><br>
+						<font color="pink"><h1><b>Get in touch!</b></h1></font>
+					</div>
+				</div>	
+			</div>
 	</div>
   
 

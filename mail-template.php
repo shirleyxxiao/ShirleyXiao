@@ -11,6 +11,9 @@
     <div class="page">
         <h1>Thanks! <?php echo htmlspecialchars($name); ?> </h1>
         <!-- More content here -->
+        <p>Hello, this is a test. please work. please please</p>
+        
     </div>
 </body>
 </html>
+
