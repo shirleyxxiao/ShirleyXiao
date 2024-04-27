@@ -185,6 +185,7 @@
 				width: 25%;
 				padding: 0px;
 				height: 300px; 
+				padding-right: 5%;
 			}
 			.row:after {
 				content: "";
@@ -199,17 +200,24 @@
 				width: 40%;
 				height: 300px; 
 				padding-bottom: 20%;
-				padding-right: 1%;
+				padding-right: 4%;
             }
 			.column1 {
 				padding-left: 38%;
 			}
           }
-		  @media screen and (max-width: 200px) {
+
+		  @media screen and (max-width: 550px) {
             .column {
+				float: center;
 				width: 100%;
             }
-		  }
+			.column1 {
+				float: center;
+				width: 100%;
+				padding-left: 0%;
+            }
+          }
 
 	</style>
 
@@ -235,12 +243,12 @@
 		</nav>
 
 		<div class="text-box">
-			<center><h1 style="font-size: 30px;"><b><font color="pink">Hover on the cards to reveal more info :)</font><b></h1></center>
+			<center><h1 style="font-size: 30px;padding: 5%;"><b><font color="pink">Hover on the cards to reveal more info :)</font><b></h1></center>
 				<br><br><br><br><br><br><br>
 		</div>
 	</section>
-	<div class="row">
-			<div class="column" style="padding-left: 15%;">
+	<div class="row" style="padding-left: 15%;">
+			<div class="column" >
 				<div class="card">
 					<a class="card-info" href="Academics.html"> <!--old link: Academics.html-->
 					  <p class="info">Double major in Statistics and Computational Math at the University of Waterloo!<br><br>Click me to learn more!</p>
