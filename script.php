@@ -1,6 +1,6 @@
 
 <?php
-   $to = "someone@mail.com";
+   $to = "shirleyxiaocoop@gmail.com";
    $subject = "Thank you for your purchase";
  
    // In php 7.2 and newer versions we can use an array to set the headers.
