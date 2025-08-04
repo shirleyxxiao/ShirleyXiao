@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Academicss</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --primary-dark: #0a0e2c;
+      --primary-light: #f3ece5;
+      --text-light: #ffffff;
+      --text-dark: #1e1e1e;
+      --font-serif: 'Playfair Display', serif;
+      --font-sans: 'Inter', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    color: #000000;
+    background-color: #000000;
+    }
+
+    /* Navigation Bar */
+    nav{
+            display: flex;
+            padding: 2% 6%;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        nav img{
+            width: 150px;
+        }
+
+        .nav-links{
+            flex: 1;
+            text-align: right;
+        }
+        .nav-links ul li{
+            list-style: none;
+            display: inline-block;
+            padding: 8px 12px;
+            position: relative;
+        }
+        .nav-links ul li a{
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        .nav-links ul li::after{
+            content: '';
+            width: 0%;
+            height: 2px;
+            background-color: pink;
+            display: block;
+            margin: auto;
+            transition: 0.5s;
+        }
+
+        .nav-links ul li:hover::after{
+            width: 100%; 
+        }
+
+        .hover-rotate {
+            overflow: hidden;
+            margin: 8px;
+            min-width: 200px;
+            max-width: 300px;
+            width: 100%;
+        }  
+
+        .hover-rotate img {
+            transition: all 1s;
+            box-sizing: border-box;
+            max-width: 100%;
+        }
+
+        .hover-rotate:hover img {
+            transform: scale(1) rotate(360deg);
+        }
+
+
+    header {
+    background-color: var(--primary-light);
+    padding: 60px 20px;
+    text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      font-family: var(--font-serif);
+      margin-bottom: 20px;
+    }
+
+    header p {
+      max-width: 600px;
+      margin: 0 auto;
+      color: #555;
+      font-size: 1rem;
+    }
+
+    /* Content Sections */
+    .section {
+      display: flex;
+      flex-wrap: wrap;
+      min-height: 400px;
+    }
+
+    .section.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .text-block, .image-block {
+      flex: 1 1 50%;
+      padding: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .text-block {
+      background-color: var(--primary-dark);
+      color: var(--text-light);
+      text-align: center;
+    }
+
+    .text-block.light {
+      background-color: var(--primary-light);
+      color: var(--text-dark);
+    }
+
+    .text-block h2 {
+      font-family: var(--font-serif);
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+
+    .text-block a {
+      color: inherit;
+      text-decoration: underline;
+      font-weight: 500;
+      font-size: 1rem;
+    }
+
+    .image-block img {
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .hidden {
+      display: none;
+      transition: all 0.3s ease;
+    }
+
+    ul {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .section {
+        flex-direction: column;
+      }
+
+      .section.reverse {
+        flex-direction: column;
+      }
+
+      .text-block, .image-block {
+        flex: 1 1 100%;
+        padding: 30px;
+      }
+
+      .nav-links ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <figure class="hover-rotate">
+      <a href="index.html"><img src="Resources/logo.png" alt="Logo" /></a>
+    </figure>
+    <div class="nav-links" id="navLinks">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="AboutMe.html">About Me</a></li>
+        <li><a href="Socials.html">Socials</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header>
+    <h1>All About My Academics<br />From 2022 to Present</h1>
+    <p>Learn more about the courses I've taken, </p>
+  </header>
+
+<!-- Section 1 -->
+<section class="section">
+  <div class="text-block">
+    <div>
+      <h2>Courses I have taken:<br /></h2>
+      <a href="#" onclick="toggleList(event)">View all the courses I've taken</a>
+
+      <!-- Hidden bullet list -->
+      <ul id="courseList" class="hidden">
+        <li>Math 135</li>
+        <li>Math 137</li>
+        <li>CS 135</li>
+        <li>SPCOM 100</li>
+        <li>AFM 101</li>
+        <li>Math 138</li>
+        <li>Math 136</li>
+        <li>CS 136</li>
+        <li>CS 136L</li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+  </div>
+  <div class="image-block">
+    <img src="https://via.placeholder.com/600x400?text=Team+Photo+1" alt="Team Photo 1" />
+  </div>
+</section>
+<script>
+  function toggleList(event) {
+    event.preventDefault();
+    const list = document.getElementById('courseList');
+    list.classList.toggle('hidden');
+  }
+</script>
+
+
+  <!-- Section 2 -->
+  <section class="section reverse">
+    <div class="text-block light">
+      <div>
+        <h2>Join our Team.<br />Build Your Future</h2>
+        <a href="#">View open roles</a>
+      </div>
+    </div>
+    <div class="image-block">
+      <img src="https://via.placeholder.com/600x400?text=Team+Photo+2" alt="Team Photo 2" />
+    </div>
+  </section>
+
+    <!-- Section 3 -->
+  <section class="section">
+    <div class="text-block">
+      <div>
+        <h2>Join our Team.<br />Build Your Future</h2>
+        <a href="#">View open roles</a>
+      </div>
+    </div>
+    <div class="image-block">
+      <img src="https://via.placeholder.com/600x400?text=Team+Photo+1" alt="Team Photo 1" />
+    </div>
+  </section>
+</body>
+</html>
