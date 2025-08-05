@@ -223,7 +223,7 @@
   <div class="text-block">
     <div>
       <h2>Courses I have taken:<br /></h2>
-      <a href="#" onclick="toggleList(event)">View all the courses I've taken</a>
+      <a href="#" onclick="toggleList(this)">View all the courses I've taken</a>
       <ul id="courseList" class="hidden">
         <li>Math 135</li>
         <li>Math 137</li>
@@ -259,13 +259,6 @@
     <img src="https://via.placeholder.com/600x400?text=Team+Photo+1" alt="Team Photo 1" />
   </div>
 </section>
-<script>
-  function toggleList(event) {
-    event.preventDefault();
-    const list = document.getElementById('courseList');
-    list.classList.toggle('hidden');
-  }
-</script>
 
   <!-- Section 2 -->
   <section class="section reverse">
@@ -298,7 +291,7 @@
     <div class="text-block light">
       <div>
       <h2>Courses I have taken:<br /></h2>
-      <a href="#" onclick="toggleList(event)">View all the courses I've taken</a>
+      <a href="#" onclick="toggleList(this)">View all the courses I've taken</a>
       <ul id="interestList" class="hidden">
         <li>Math 135</li>
         <li>Math 137</li>
@@ -334,20 +327,13 @@
       <img src="https://via.placeholder.com/600x400?text=Team+Photo+2" alt="Team Photo 2" />
     </div>
   </section>
-  <script>
-  function toggleList(event) {
-    event.preventDefault();
-    const list = document.getElementById('interestList');
-    list.classList.toggle('hidden');
-  }
-</script>
 
   <!-- Section 5 -->
   <section class="section">
   <div class="text-block">
     <div>
       <h2>Courses I have taken:<br /></h2>
-      <a href="#" onclick="toggleList(event)">View all the courses I've taken</a>
+      <a href="#" onclick="toggleList(this)">View all the courses I've taken</a>
       <ul id="myMajor" class="hidden">
         <li>Math 135</li>
         <li>Math 137</li>
@@ -362,13 +348,14 @@
     <img src="https://via.placeholder.com/600x400?text=Team+Photo+1" alt="Team Photo 1" />
   </div>
 </section>
-<script>
-  function toggleList(event) {
-    event.preventDefault();
-    const list = document.getElementById('myMajor');
-    list.classList.toggle('hidden');
-  }
-</script>
 
 </body>
+<script>
+  function toggleList(linkElement) {
+    const list = linkElement.nextElementSibling;
+    if (list && list.tagName === 'UL') {
+      list.classList.toggle('hidden');
+    }
+  }
+</script>
 </html>
