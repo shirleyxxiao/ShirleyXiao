@@ -267,7 +267,6 @@
   }
 </script>
 
-
   <!-- Section 2 -->
   <section class="section reverse">
     <div class="text-block light">
@@ -281,7 +280,7 @@
     </div>
   </section>
 
-    <!-- Section 3 -->
+  <!-- Section 3 -->
   <section class="section">
     <div class="text-block">
       <div>
@@ -293,5 +292,83 @@
       <img src="https://via.placeholder.com/600x400?text=Team+Photo+1" alt="Team Photo 1" />
     </div>
   </section>
+
+  <!-- Section 4 -->
+  <section class="section reverse">
+    <div class="text-block light">
+      <div>
+      <h2>Courses I have taken:<br /></h2>
+      <a href="#" onclick="toggleList(event)">View all the courses I've taken</a>
+      <ul id="interestList" class="hidden">
+        <li>Math 135</li>
+        <li>Math 137</li>
+        <li>CS 135</li>
+        <li>SPCOM 100</li>
+        <li>AFM 101</li>
+        <li>Math 138</li>
+        <li>Math 136</li>
+        <li>CS 136</li>
+        <li>CS 136L</li>
+        <li>ENGL 108D</li>
+        <li>PSYCH 101</li>
+        <li>EARTH 121</li>
+        <li>Math 237</li>
+        <li>Math 235</li>
+        <li>Stat 230</li>
+        <li>Clas 104</li>
+        <li>Amath 250</li>
+        <li>Math 239</li>
+        <li>Stat 231</li>
+        <li>CS 230</li>
+        <li>CS 371</li>
+        <li>CS 234</li>
+        <li>Clas 202</li>
+        <li>CS 246</li>
+        <li>Stat 331</li>
+        <li>Stat 341</li>
+        <li>CS 330</li>
+      </ul>
+    </div>
+    </div>
+    <div class="image-block">
+      <img src="https://via.placeholder.com/600x400?text=Team+Photo+2" alt="Team Photo 2" />
+    </div>
+  </section>
+  <script>
+  function toggleList(event) {
+    event.preventDefault();
+    const list = document.getElementById('interestList');
+    list.classList.toggle('hidden');
+  }
+</script>
+
+  <!-- Section 5 -->
+  <section class="section">
+  <div class="text-block">
+    <div>
+      <h2>Courses I have taken:<br /></h2>
+      <a href="#" onclick="toggleList(event)">View all the courses I've taken</a>
+      <ul id="myMajor" class="hidden">
+        <li>Math 135</li>
+        <li>Math 137</li>
+        <li>CS 135</li>
+        <li>SPCOM 100</li>
+        <li>AFM 101</li>
+        <li>Math 138</li>
+      </ul>
+    </div>
+  </div>
+  <div class="image-block">
+    <img src="https://via.placeholder.com/600x400?text=Team+Photo+1" alt="Team Photo 1" />
+  </div>
+</section>
+<script>
+  function toggleList(event) {
+    event.preventDefault();
+    const list = document.getElementById('myMajor');
+    list.classList.toggle('hidden');
+  }
+</script>
+
 </body>
 </html>
