@@ -169,6 +169,19 @@
       padding-left: 20px;
     }
 
+  button.link-style {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    color: pink;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  button.link-style:hover {
+    color: rgb(228, 121, 139);
+  }
 
     /* Responsive Design */
     @media (max-width: 768px) {
@@ -223,7 +236,7 @@
   <div class="text-block">
     <div>
       <h2>Courses I have taken:<br /></h2>
-      <a href="#" onclick="toggleList(this)">View all the courses I've taken</a>
+      <button class="link-style" onclick="toggleList(this)">View all the courses I've taken</button>
       <ul id="courseList" class="hidden">
         <li>Math 135</li>
         <li>Math 137</li>
@@ -265,7 +278,7 @@
     <div class="text-block light">
       <div>
         <h2>Join our Team.<br />Build Your Future</h2>
-        <a href="#">View open roles</a>
+        <button class="link-style" onclick="toggleList(this)">View all the courses I've taken</button>
       </div>
     </div>
     <div class="image-block">
@@ -278,7 +291,7 @@
     <div class="text-block">
       <div>
         <h2>Join our Team.<br />Build Your Future</h2>
-        <a href="#">View open roles</a>
+      <button class="link-style" onclick="toggleList(this)">View all the courses I've taken</button>
       </div>
     </div>
     <div class="image-block">
@@ -291,7 +304,7 @@
     <div class="text-block light">
       <div>
       <h2>Courses I have taken:<br /></h2>
-      <a href="#" onclick="toggleList(this)">View all the courses I've taken</a>
+      <button class="link-style" onclick="toggleList(this)">View all the courses I've taken</button>
       <ul id="interestList" class="hidden">
         <li>Math 135</li>
         <li>Math 137</li>
@@ -333,7 +346,7 @@
   <div class="text-block">
     <div>
       <h2>Courses I have taken:<br /></h2>
-      <a href="#" onclick="toggleList(this)">View all the courses I've taken</a>
+      <button class="link-style" onclick="toggleList(this)">View all the courses I've taken</button>
       <ul id="myMajor" class="hidden">
         <li>Math 135</li>
         <li>Math 137</li>
