@@ -183,6 +183,44 @@
     color: rgb(228, 121, 139);
   }
 
+  .bounce-box {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  background-color: #111; /* dark background */
+  overflow: hidden;
+  border: 2px solid #444;
+  border-radius: 8px;
+}
+
+.pixel {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: #00ffcc; /* neon pixel color */
+  border-radius: 2px;
+}
+
+.butterfly-box {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  background-color: #111;
+  overflow: hidden;
+  border: 2px solid #444;
+  border-radius: 8px;
+}
+
+.butterfly {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  image-rendering: pixelated; /* Keeps that pixel-art crispness */
+  pointer-events: none;
+  transition: transform 0.3s ease-in-out;
+}
+
+
     /* Responsive Design */
     @media (max-width: 768px) {
       .section {
@@ -242,8 +280,8 @@
 
     </div>
   </div>
-  <div class="image-block">
-    <img src="https://via.placeholder.com/600x400?text=Team+Photo+1" alt="Team Photo 1" />
+  
+
   </div>
 </section>
 
@@ -285,9 +323,38 @@
       </ul>
       </div>
     </div>
-    <div class="image-block">
-      <img src="https://via.placeholder.com/600x400?text=Team+Photo+2" alt="Team Photo 2" />
-    </div>
+   <div class="image-block bounce-box">
+    <div class="pixel"></div>
+  </div>
+  <script>
+  const pixel = document.querySelector('.pixel');
+  const box = document.querySelector('.bounce-box');
+
+  let posX = 100;
+  let posY = 100;
+  let velocityX = 2;
+  let velocityY = 2;
+
+  const pixelSize = 16;
+
+  function animate() {
+    const boxWidth = box.clientWidth;
+    const boxHeight = box.clientHeight;
+
+    posX += velocityX;
+    posY += velocityY;
+
+    // Bounce off the walls
+    if (posX <= 0 || posX + pixelSize >= boxWidth) velocityX *= -1;
+    if (posY <= 0 || posY + pixelSize >= boxHeight) velocityY *= -1;
+
+    pixel.style.transform = `translate(${posX}px, ${posY}px)`;
+
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+  </script>
   </section>
 
   <!-- Section 3 -->
@@ -298,9 +365,38 @@
       <button class="link-style" onclick="toggleList(this)">View all the courses I've taken</button>
       </div>
     </div>
-    <div class="image-block">
-      <img src="https://via.placeholder.com/600x400?text=Team+Photo+1" alt="Team Photo 1" />
-    </div>
+   <div class="image-block butterfly-box">
+    <img class="butterfly" src="https://gifdb.com/images/high/purple-pixelated-butterflies-e4gqwyvolar4cyw5.webp" alt="Butterfly" />
+  </div>
+  <script>
+  const butterfly = document.querySelector('.butterfly');
+  const container = document.querySelector('.butterfly-box');
+
+  const butterflySize = 32;
+  let posX1 = 500;
+  let posY1 = 500;
+
+ function moveButterfly() {
+  const boxWidth = container.clientWidth*0.5;
+  const boxHeight = container.clientHeight*0.5;
+
+  const dx = (Math.random() - 0.5) * 100;
+  const dy = (Math.random() - 0.5) * 100;
+
+  let nextX = posX + dx;
+  let nextY = posY + dy;
+
+  nextX = Math.max(0, Math.min(boxWidth - butterflySize, nextX));
+  nextY = Math.max(0, Math.min(boxHeight - butterflySize, nextY));
+
+  posX = nextX;
+  posY = nextY;
+  butterfly.style.transform = `translate(${posX}px, ${posY}px)`;
+  setTimeout(moveButterfly, 50);
+}
+  moveButterfly();
+</script>
+
   </section>
 
   <!-- Section 4 -->
